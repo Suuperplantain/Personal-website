@@ -10,6 +10,24 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            /* Custom styles to override template defaults */
+            #banner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #banner .content {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 2em;
+            }
+            #banner .image.object {
+                margin-top: 2em;
+                width: 100%;
+                text-align: center;
+            }
+        </style>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -23,21 +41,19 @@
 								</header>
 							<!-- Banner -->
 								<section id="banner">
-									<div class="content" style="text-align: center; width: 100%;">
-										<header style="text-align: center;">
-											<h1>Hi, Terkaudoon Abbo here.</h1>
+									<div class="content">
+										<header>
+											<h1>Hi, Terkaudoon Abbo here,</h1>
 											<p>This is my portfolio!!</p>
 										</header>
 										<p>You should replace the contents of this website with your own work. You can do this by editing it directly within GitHub editor. In addition to this page (index.html) there are 4 other pages in this template: career.html, skills.html, development.html and conduct.html</p>
-										<ul class="actions" style="justify-content: center;">
+										<ul class="actions">
 											<li><a href="#" class="button big">Learn More</a></li>
 										</ul>
 									</div>
-									<div style="text-align: center; margin-top: 2em;">
-										<span class="image object">
-											<img src="images/pic01.jpg" alt="" />
-										</span>
-									</div>
+									<span class="image object">
+										<img src="images/pic01.jpg" alt="" />
+									</span>
 								</section>
 						</div>
 					</div>
