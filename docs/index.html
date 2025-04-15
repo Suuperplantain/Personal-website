@@ -12,6 +12,16 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
         <style>
             /* Custom styles to override template defaults */
+            body {
+                background-color: #0c0e46;
+            }
+            #wrapper {
+                background-color: #0c0e46;
+            }
+            #main {
+                background-color: #0c0e46;
+                color: #ffffff;
+            }
             #banner {
                 display: flex;
                 flex-direction: column;
@@ -21,6 +31,7 @@
                 width: 100%;
                 text-align: center;
                 margin-bottom: 2em;
+                color: #ffffff;
             }
             #banner .image.object {
                 margin-top: 2em;
@@ -42,6 +53,23 @@
             /* Important: Don't hide the sidebar */
             #sidebar {
                 display: block !important;
+                background-color: #0c0e46;
+                color: #ffffff;
+            }
+            /* Make links and headers visible on dark background */
+            a, h1, h2, h3, h4, h5, h6 {
+                color: #ffffff !important;
+            }
+            #header .logo strong {
+                color: #ffffff;
+            }
+            /* Menu links */
+            #menu ul a {
+                color: #ffffff !important;
+            }
+            /* Footer text */
+            #footer .copyright {
+                color: #cccccc;
             }
         </style>
 	</head>
