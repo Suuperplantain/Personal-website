@@ -44,6 +44,8 @@
             #banner .image.object img {
                 width: 100%;
                 height: auto;
+                max-height: 200px; /* Added to reduce height by half */
+                object-fit: contain; /* Ensures image maintains aspect ratio */
             }
             /* Center align the Learn More button */
             #banner .actions {
@@ -71,6 +73,16 @@
             #footer .copyright {
                 color: #cccccc;
             }
+            /* Special color for name to match Learn More button */
+            .name-highlight, .button.big {
+                color: #f56a6a !important;
+            }
+            #header .logo strong.name-highlight {
+                color: #f56a6a !important;
+            }
+            h1.name-highlight {
+                color: #f56a6a !important;
+            }
         </style>
 	</head>
 	<body class="is-preload">
@@ -81,13 +93,13 @@
 						<div class="inner">
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo"><strong>Hi, Terkaudoon Abbo here,</strong> this is my portfolio</a>			
+									<a href="index.html" class="logo"><strong class="name-highlight">Hi, Terkaudoon Abbo here,</strong> this is my portfolio</a>			
 								</header>
 							<!-- Banner -->
 								<section id="banner">
 									<div class="content">
 										<header>
-											<h1>Hi, Terkaudoon Abbo here,</h1>
+											<h1 class="name-highlight">Hi, Terkaudoon Abbo here,</h1>
 											<p>This is my portfolio!!</p>
 										</header>
 										<p>I am a student at Nottingham Trent University, United Kingdom. I am currently studying Computer Science and Artificial Intelligence, and I'm fascinated by the way machine learning models can learn how to perform tasks without instructions—just data. I hope to build one of my own in the near future.</p>
