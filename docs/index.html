@@ -11,74 +11,105 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
         <style>
-            /* Custom styles - now with lighter background like careers page */
+            :root {
+                --accent-color: #f56a6a;
+                --text-color: #333;
+                --light-bg: #f8f9fa;
+            }
+            
             body {
-                background-color: #f5f5f5; /* Lighter background */
+                color: var(--text-color);
+                background-color: #ffffff;
             }
+            
             #wrapper {
-                background-color: #f5f5f5;
+                background-color: #ffffff;
             }
+            
             #main {
-                background-color: #ffffff; /* White content area */
-                color: #333333; /* Darker text for better contrast */
+                background-color: #ffffff;
             }
+
             #banner {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                padding: 3rem 0;
             }
+
             #banner .content {
-                width: 100%;
+                width: 80%;
                 text-align: center;
-                margin-bottom: 2em;
-                color: #333333; /* Dark text */
+                margin-bottom: 3rem;
             }
+
             #banner .image.object {
-                margin-top: 2em;
-                width: 50%;
-                text-align: center;
-                max-width: 600px;
-                margin-left: auto;
-                margin-right: auto;
+                width: 60%;
+                max-width: 500px;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
             }
+
+            #banner .image.object:hover {
+                transform: translateY(-5px);
+            }
+
             #banner .image.object img {
                 width: 100%;
                 height: auto;
-                max-height: 400px;
-                object-fit: contain;
+                border-radius: 20px;
             }
-            /* Center align the Learn More button */
-            #banner .actions {
-                display: flex;
-                justify-content: center;
+
+            .main-header {
+                text-align: center;
+                margin-bottom: 3rem;
+                padding-bottom: 1.5rem;
             }
-            /* Keep sidebar visible */
-            #sidebar {
-                display: block !important;
-                background-color: #ffffff; /* White sidebar */
-                color: #333333;
+
+            .main-header .logo {
+                font-size: 2.5rem;
+                color: var(--accent-color) !important;
             }
-            /* Header and link colors */
-            a, h1, h2, h3, h4, h5, h6 {
-                color: #333333 !important; /* Dark text */
+
+            .feature-card {
+                background: var(--light-bg);
+                padding: 3rem;
+                border-radius: 20px;
+                margin: 3rem auto;
+                width: 80%;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             }
-            #header .logo strong {
-                color: #333333;
+
+            .button.big {
+                border-radius: 50px;
+                padding: 1.2rem 2.5rem;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                transition: all 0.3s ease;
             }
-            /* Menu links */
-            #menu ul a {
-                color: #333333 !important;
+
+            .button.big:hover {
+                background-color: var(--accent-color);
+                color: white !important;
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(245,106,106,0.3);
             }
-            /* Footer text */
-            #footer .copyright {
-                color: #666666;
-            }
-            /* Special color for name to match Learn More button (kept your red accent) */
-            .name-highlight, .button.big {
-                color: #f56a6a !important;
-            }
-            #header .logo strong.name-highlight {
-                color: #f56a6a !important;
+
+            @media screen and (max-width: 768px) {
+                #banner .content {
+                    width: 90%;
+                }
+                
+                .feature-card {
+                    width: 90%;
+                    padding: 2rem;
+                }
+                
+                #banner .image.object {
+                    width: 80%;
+                }
             }
         </style>
 	</head>
@@ -89,54 +120,81 @@
 					<div id="main">
 						<div class="inner">
 							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong class="name-highlight">Hi, Terkaudoon Abbo here,</strong> this is my portfolio</a>			
+								<header class="main-header">
+									<a href="index.html" class="logo"><strong class="name-highlight">Terkaudoon Abbo</strong></a>
+									<p>Artificial Intelligence & Machine Learning Enthusiast</p>
 								</header>
+
 							<!-- Banner -->
 								<section id="banner">
-									<div class="content">
-										<header>
-											<h1 class="name-highlight">Hi, Terkaudoon Abbo here,</h1>
-											<p>This is my portfolio!!</p>
-										</header>
-										<p>I am a student at Nottingham Trent University, United Kingdom. I am currently studying Computer Science and Artificial Intelligence, and I'm fascinated by the way machine learning models can learn how to perform tasks without instructions—just data. I hope to build one of my own in the near future.</p>
-										<ul class="actions">
-											<li><a href="#" class="button big">Learn More</a></li>
-										</ul>
+									<div class="feature-card">
+										<div class="content">
+											<header>
+												<h1 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Innovating Through<br><span class="highlight">Intelligent Systems</span></h1>
+											</header>
+											<p class="lead-text" style="font-size: 1.2rem; line-height: 1.8;">
+												Computer Science & AI student at Nottingham Trent University passionate about developing machine learning solutions that combine technical excellence with ethical considerations. Currently exploring neural architectures and their applications in sustainable urban development.
+											</p>
+											<ul class="actions" style="margin-top: 2.5rem;">
+												<li><a href="1career.html" class="button big">Explore My Journey</a></li>
+											</ul>
+										</div>
+										<span class="image object">
+											<img src="images/pic01.jpg" alt="Terkaudoon Abbo Profile" />
+										</span>
 									</div>
-									<span class="image object">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
+								</section>
+
+								<!-- Skills Preview -->
+								<section style="padding: 3rem 0;">
+									<div class="feature-card">
+										<div class="grid-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+											<div class="skill-item">
+												<h3 class="highlight">Technical Expertise</h3>
+												<ul>
+													<li>Python & TensorFlow</li>
+													<li>Neural Network Design</li>
+													<li>Data Analysis</li>
+												</ul>
+											</div>
+											<div class="skill-item">
+												<h3 class="highlight">Current Focus</h3>
+												<ul>
+													<li>Transformer Models</li>
+													<li>AI Ethics</li>
+													<li>Cloud ML Systems</li>
+												</ul>
+											</div>
+										</div>
+									</div>
 								</section>
 						</div>
 					</div>
+
 				<!-- Sidebar -->
 					<div id="sidebar">
 						<div class="inner">
-							<!-- Search -->
-								<section id="search" class="alt">
-									<!-- Search form removed -->
-								</section>
 							<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
-										<h2>Menu</h2>
+										<h2>Navigation</h2>
 									</header>
 									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										<li><a href="1career.html">Reflections on career aspirations</a></li>
-										<li><a href="2skills.html">Analysis and evidence of own skills</a></li>
-										<li><a href="3development.html">Knowledge and skills development</a></li>
-										<li><a href="4conduct.html">Reflection on professional conduct</a></li>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="1career.html">Career Aspirations</a></li>
+										<li><a href="2skills.html">Skills Analysis</a></li>
+										<li><a href="3development.html">Development Plan</a></li>
+										<li><a href="4conduct.html">Professional Conduct</a></li>
 									</ul>
 								</nav>
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+									<p class="copyright">&copy; Terkaudoon Abbo. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 								</footer>
 						</div>
 					</div>
 			</div>
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
