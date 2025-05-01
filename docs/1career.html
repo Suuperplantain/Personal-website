@@ -1,95 +1,250 @@
 <!DOCTYPE HTML>
 <!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Career aspirations</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+    <head>
+        <title>Career Aspirations - Terkaudoon Abbo</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            :root {
+                --accent-color: #f56a6a;
+                --text-color: #333;
+                --light-bg: #f8f9fa;
+            }
+            
+            body {
+                color: var(--text-color);
+            }
+            
+            .main-header {
+                text-align: center;
+                margin-bottom: 3rem;
+                padding-bottom: 1.5rem;
+                border-bottom: 3px solid var(--accent-color);
+            }
+            
+            .highlight {
+                color: var(--accent-color);
+                font-weight: 600;
+            }
+            
+            .feature-card {
+                background: var(--light-bg);
+                padding: 2rem;
+                border-radius: 8px;
+                margin: 2rem 0;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+                margin: 2rem 0;
+            }
+            
+            .quote-box {
+                border-left: 4px solid var(--accent-color);
+                padding-left: 1.5rem;
+                margin: 2rem 0;
+                font-style: italic;
+                background: var(--light-bg);
+                padding: 1.5rem;
+                border-radius: 0 8px 8px 0;
+            }
+            
+            .step-list {
+                counter-reset: step-counter;
+                margin-left: 2rem;
+            }
+            
+            .step-list li {
+                counter-increment: step-counter;
+                margin: 1.5rem 0;
+                padding-left: 2rem;
+                position: relative;
+                font-size: 1.1rem;
+            }
+            
+            .step-list li:before {
+                content: counter(step-counter);
+                position: absolute;
+                left: 0;
+                top: -0.2rem;
+                color: var(--accent-color);
+                font-weight: 700;
+                font-size: 1.5rem;
+            }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+            .company-logo {
+                width: 120px;
+                margin: 1rem auto;
+                display: block;
+                filter: grayscale(100%);
+                transition: filter 0.3s ease;
+            }
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+            .company-logo:hover {
+                filter: grayscale(0%);
+            }
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong>ISYS10401 Example portfolio</a>
-								</header>
+            .aspiration-box {
+                background: linear-gradient(135deg, #000000 0%, #2d3436 100%);
+                color: white;
+                padding: 2rem;
+                border-radius: 8px;
+                margin: 2rem 0;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
 
-							<!-- Content -->
-								<section>
-									<header class="main">
-										<h1>Career Aspirations&nbsp;</h1>
-									</header>
+            .aspiration-box:before {
+                content: "";
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: linear-gradient(45deg, transparent 20%, #f56a6a 50%, transparent 80%);
+                animation: shine 3s infinite;
+            }
 
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+            @keyframes shine {
+                0% { transform: translateX(-100%); }
+                100% { transform: translateX(100%); }
+            }
 
-									<p>This page should reflect on career aspirations and the knowledge and skills required.&nbsp;</p>
-									<p>It should include info taken from guest lectures and wider research</p>
-									<p>&nbsp;</p>
-<p>Beverley Cook</p>
+            @media screen and (max-width: 768px) {
+                .grid-container {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <!-- Main -->
+            <div id="main">
+                <div class="inner">
+                    <!-- Header -->
+                    <header class="main-header">
+                        <h1>Career Aspirations in <span class="highlight">Machine Learning Engineering</span></h1>
+                        <img src="images/openai-logo.png" alt="OpenAI logo" class="company-logo">
+                    </header>
 
-									<hr class="major" />
+                    <!-- Content -->
+                    <section>
+                        <div class="feature-card">
+                            <h2>Career Vision</h2>
+                            <p class="has-text-centered">As an aspiring machine learning engineer, my primary career goal is to secure a role in a <span class="highlight">U.S.-based company</span>, ideally within the public sector initially, to build foundational experience before transitioning to cutting-edge AI research organizations.</p>
+                            
+                            <div class="aspiration-box">
+                                <h3>Ultimate Career Goal</h3>
+                                <p>I aspire to contribute to groundbreaking AI research at organizations like <span class="highlight">OpenAI</span>, working on fundamental advances in artificial intelligence that benefit humanity while maintaining rigorous safety standards. The opportunity to work on large language models and ethical AI development at this scale represents my ultimate career aspiration.</p>
+                            </div>
 
-									<h2>Add a header</h2>
-									<p>Add a paragraph text</p>
-									<p>add another paragraph if needed</p>
-									<!-- repeat the block above if you want to add another section with header and paragraphs.-->
-								</section>
+                            <div class="grid-container">
+                                <div>
+                                    <h3 class="highlight">Why Public Sector First?</h3>
+                                    <ul>
+                                        <li>Impactful projects (healthcare, infrastructure)</li>
+                                        <li>Structured training programs</li>
+                                        <li>Mission-driven work environment</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="highlight">Long-Term Goals</h3>
+                                    <ul>
+                                        <li>Transition to private sector innovation</li>
+                                        <li>Lead ML research teams at AI pioneers</li>
+                                        <li>Develop industry-specific AI solutions</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-						</div>
-					</div>
+                        <div class="feature-card">
+                            <h2>Technical Competencies</h2>
+                            <div class="grid-container">
+                                <div>
+                                    <h3 class="highlight">Core Skills</h3>
+                                    <ul>
+                                        <li><span class="highlight">Python/R</span> Programming</li>
+                                        <li><span class="highlight">TensorFlow/PyTorch</span> Frameworks</li>
+                                        <li>Data Preprocessing & Analysis</li>
+                                        <li>Cloud Platforms (AWS/Azure)</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="highlight">Advanced Expertise</h3>
+                                    <ul>
+                                        <li>Transformer Architectures</li>
+                                        <li>Reinforcement Learning</li>
+                                        <li>AI Safety Frameworks</li>
+                                        <li>LLM Fine-tuning</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <h3 class="highlight" style="margin-top: 2rem;">Current Projects</h3>
+                            <p>Developing a <span class="highlight">predictive model for public transport efficiency</span> and contributing to open-source AI safety initiatives to demonstrate practical application of machine learning principles.</p>
+                        </div>
 
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
+                        <div class="feature-card">
+                            <h2>Strategic Career Plan</h2>
+                            <ol class="step-list">
+                                <li>Obtain <span class="highlight">AWS Machine Learning Specialty</span> certification</li>
+                                <li>Complete OpenAI's Scholar Program</li>
+                                <li>Publish research paper on transportation AI models</li>
+                                <li>Develop open-source AI safety toolkit</li>
+                                <li>Network with AI researchers via conferences</li>
+                                <li>Apply to U.S. public sector ML engineering roles</li>
+                            </ol>
+                            
+                            <div class="quote-box" style="margin-top: 2rem;">
+                                <p>"Guest lectures emphasized the importance of combining technical excellence with strategic networking for career advancement in competitive AI fields."</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
 
-							 <!-- Search --> 
-								<section id="search" class="alt"><!--
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>-->
-								</section>
+            <!-- Sidebar -->
+            <div id="sidebar">
+                <div class="inner">
+                    <!-- Menu -->
+                    <nav id="menu">
+                        <header class="major">
+                            <h2>Menu</h2>
+                        </header>
+                        <ul>
+                            <li><a href="index.html">Homepage</a></li>
+                            <li><a href="1career.html">Career Aspirations</a></li>
+                            <li><a href="2skills.html">Skills Analysis</a></li>
+                            <li><a href="3development.html">Development Plan</a></li>
+                            <li><a href="4conduct.html">Professional Conduct</a></li>
+                        </ul>
+                    </nav>
+                    <!-- Footer -->
+                    <footer id="footer">
+                        <p class="copyright">&copy; Terkaudoon Abbo. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
 
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										<li><a href="1career.html">Reflections on career aspirations</a></li>
-										<li><a href="2skills.html">Analysis and evidence of own skills</a></li>
-										<li><a href="3development.html">Knowledge and skills development</a></li>
-										<li><a href="4conduct.html">Reflection on professional conduct</a></li>
-									</ul>
-								</nav>
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
-
-						</div>
-					</div>
-				
-			</div>
-				
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
