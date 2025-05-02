@@ -102,6 +102,54 @@
                 border-radius: 25px;
                 border-left: 5px solid var(--accent-color);
             }
+            
+            /* Additional styles for career aspirations content */
+            .highlight {
+                color: var(--accent-color);
+                font-weight: bold;
+            }
+            
+            .key-point {
+                background-color: rgba(245,106,106,0.05);
+                padding: 1.5rem;
+                border-radius: 15px;
+                margin: 1.5rem 0;
+                border-left: 4px solid var(--accent-color);
+            }
+            
+            .skills-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 2rem;
+                margin: 2rem 0;
+            }
+            
+            .skill-category {
+                background: var(--light-bg);
+                padding: 1.5rem;
+                border-radius: 15px;
+                border-left: 4px solid var(--accent-color);
+            }
+            
+            .skill-category h3 {
+                color: var(--accent-color);
+                margin-top: 0;
+            }
+            
+            .emphasis {
+                font-style: italic;
+                font-weight: 500;
+            }
+            
+            .conclusion {
+                text-align: center;
+                font-weight: 500;
+                font-size: 1.1rem;
+                padding: 2rem;
+                background: rgba(245,106,106,0.08);
+                border-radius: 15px;
+                margin: 2rem 0;
+            }
         </style>
     </head>
     <body class="is-preload">
@@ -118,47 +166,126 @@
                     <!-- Animated Section -->
                     <section class="animated-section">
                         <div class="content-wrapper">
-                            <img src="images/openai-logo.jpg" alt="OpenAI logo" class="company-logo">
-                            <h1 style="color: white; text-align: center;">Career Aspirations in AI Development</h1>
+                            <h1 style="color: white; text-align: center;">Career Aspirations in Machine Learning Engineering</h1>
                         </div>
                     </section>
 
                     <!-- Content Sections -->
                     <div class="content-wrapper">
-                        <!-- Career Goals -->
+                        <!-- Career Vision -->
                         <div class="detail-card">
                             <h2>Career Vision</h2>
-                            <p>First-year Computer Science & AI student at Nottingham Trent University focused on developing machine learning expertise through academic projects and practical implementations.</p>
+                            <p>I'm so excited about pursuing my dream as a machine learning engineer! My <span class="highlight">biggest hope</span> is to land a role with a U.S.-based company, hopefully starting in the <span class="highlight">public sector</span> to build up my experience before I venture into the private sector world.</p>
+                            
+                            <div class="key-point">
+                                <p>I'm really drawn to the U.S. because I love:</p>
+                                <ul>
+                                    <li>The amazing innovation happening in their tech scene</li>
+                                    <li>Their focus on having a good work-life balance</li>
+                                    <li>The chance to work on meaningful public projects that could help with healthcare or make infrastructure better!</li>
+                                </ul>
+                            </div>
+                            
+                            <p>I've been inspired by so many guest speakers in my classes who keep emphasizing how important it is to match my technical skills with organizations that are doing good in the world. I really want to be part of something that makes a difference!</p>
                             
                             <div class="tech-tag-group">
                                 <span class="tech-tag">Python</span>
-                                <span class="tech-tag">C++</span>
                                 <span class="tech-tag">TensorFlow</span>
-                                <span class="tech-tag">AWS Basics</span>
+                                <span class="tech-tag">PyTorch</span>
+                                <span class="tech-tag">Machine Learning</span>
                             </div>
                         </div>
 
-                        <!-- Project Timeline -->
+                        <!-- Skills and Knowledge Requirements -->
                         <div class="detail-card">
-                            <h2>Technical Projects</h2>
+                            <h2>Skills and Knowledge Requirements</h2>
+                            
+                            <p>I've been obsessively reading job posts and listening to every guest speaker I can, and here's what I think I'll need to land my dream job:</p>
+                            
+                            <div class="skills-grid">
+                                <div class="skill-category">
+                                    <h3>Technical Skills I Need!</h3>
+                                    <ul>
+                                        <li>Programming Languages: <span class="emphasis">Python, R</span> (I'm practicing these daily!)</li>
+                                        <li>ML Frameworks: <span class="emphasis">TensorFlow, PyTorch</span> (so exciting to learn!)</li>
+                                        <li>All those tricky data preprocessing techniques</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="skill-category">
+                                    <h3>Skills I Hope to Master Soon</h3>
+                                    <ul>
+                                        <li>Cloud Platforms: <span class="emphasis">AWS, Azure</span> (starting with free tutorials!)</li>
+                                        <li>Big Data Tools: <span class="emphasis">Spark, Hadoop</span> (these look challenging but fun!)</li>
+                                        <li>Specific knowledge for healthcare or infrastructure projects</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <p>The guest speakers kept telling us that <span class="highlight">soft skills</span> are just as important! I need to get better at working with different teams and solving complex problems - these seem super important no matter where I end up.</p>
+                            
+                            <div class="key-point">
+                                <p><strong>My Current Project:</strong> I'm working on this really cool predictive model for public transport efficiency! It's helping me practice all these skills and hopefully will look great in my portfolio. I'm learning so much from it already!</p>
+                            </div>
+                        </div>
+
+                        <!-- Location and Work Environment -->
+                        <div class="detail-card">
+                            <h2>Location and Work Environment Preferences</h2>
+                            
+                            <p>I love studying in the UK, but I'm dreaming of working in the <span class="highlight">United States</span>! Their tech hubs are so vibrant, and I'm drawn to how innovation seems to be in their DNA. Hopefully I can make this happen!</p>
+                            
                             <div class="phase-timeline">
                                 <div class="phase-card">
-                                    <h3>Text Similarity Analyzer</h3>
+                                    <h3>Why I'm Excited About Public Sector</h3>
                                     <ul>
-                                        <li>TF-IDF implementation</li>
-                                        <li>89% accuracy rate</li>
-                                        <li>Python/scikit-learn</li>
+                                        <li>They offer amazing training programs!</li>
+                                        <li>I'd get to work on projects that really matter</li>
+                                        <li>I'm fascinated by healthcare & infrastructure challenges</li>
+                                        <li>It would give me such a solid foundation for my career</li>
                                     </ul>
                                 </div>
                                 
                                 <div class="phase-card">
-                                    <h3>Game AI Development</h3>
+                                    <h3>My Ideal Work Setup</h3>
                                     <ul>
-                                        <li>Minimax algorithm</li>
-                                        <li>C++ implementation</li>
-                                        <li>100% win rate</li>
+                                        <li>I'd love a hybrid or remote arrangement</li>
+                                        <li>I work best when I can focus without distractions</li>
+                                        <li>Work-life balance is super important to me</li>
+                                        <li>So happy this is becoming more common in the U.S.!</li>
                                     </ul>
                                 </div>
+                            </div>
+                        </div>
+
+                        <!-- Strategic Steps -->
+                        <div class="detail-card">
+                            <h2>Strategic Steps to Achieve Career Goals</h2>
+                            
+                            <p>I'm working super hard on boosting my chances of landing my dream job! Here's my game plan:</p>
+                            
+                            <div class="phase-timeline">
+                                <div class="phase-card">
+                                    <h3>My Learning Journey</h3>
+                                    <ul>
+                                        <li>I'm saving up for that AWS Machine Learning certification!</li>
+                                        <li>Learning Agile methods through online courses - so useful!</li>
+                                        <li>Working on projects that could help in the public sector</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="phase-card">
+                                    <h3>How I'm Building Connections</h3>
+                                    <ul>
+                                        <li>Reaching out to U.S. professionals on LinkedIn (scary but worth it!)</li>
+                                        <li>Attending every webinar and virtual meetup I can find</li>
+                                        <li>Crafting applications that show I've done my homework on what they need</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="conclusion">
+                                I'm so hopeful that by combining my technical skills with careful planning, I'll find a role that matches my dreams in the U.S.! Fingers crossed that all this hard work pays off soon!
                             </div>
                         </div>
                     </div>
