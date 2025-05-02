@@ -18,43 +18,101 @@
             }
 
             .openai-hero {
-                width: 50%;
+                width: 55%;
                 margin: 2rem auto;
-                padding: 20px;
-                background: rgba(255,255,255,0.1);
-                border-radius: 25px;
+                padding: 25px;
+                background: rgba(255,255,255,0.15);
+                border-radius: 30px;
                 position: relative;
-                overflow: hidden;
-                transition: transform 0.3s ease;
-                animation: pulseBorder 2s infinite;
+                overflow: visible;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                animation: glowPulse 2.5s infinite;
             }
 
-            @keyframes pulseBorder {
-                0% { box-shadow: 0 0 0 0px rgba(245,106,106,0.4); }
-                100% { box-shadow: 0 0 0 15px rgba(245,106,106,0); }
+            @keyframes glowPulse {
+                0%, 100% { 
+                    box-shadow: 0 0 25px 5px rgba(245,106,106,0.2),
+                                0 0 50px 10px rgba(245,106,106,0.1); 
+                }
+                50% { 
+                    box-shadow: 0 0 35px 15px rgba(245,106,106,0.3),
+                                0 0 60px 20px rgba(245,106,106,0.15); 
+                }
             }
 
             .openai-hero img {
                 width: 100%;
                 height: auto;
-                border-radius: 15px;
-                transition: transform 0.3s ease;
+                border-radius: 20px;
+                transform: scale(0.98);
+                transition: transform 0.4s ease;
+                border: 2px solid rgba(245,106,106,0.3);
             }
 
             .openai-hero:hover {
-                transform: translateY(-5px);
+                transform: translateY(-8px) scale(1.02);
+            }
+
+            .openai-hero:hover img {
+                transform: scale(1);
             }
 
             .animated-section {
-                background: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
-                padding: 4rem 2rem;
-                border-radius: 25px;
+                background: linear-gradient(135deg, #0a0a0a 0%, #1f1f1f 100%);
+                padding: 5rem 2rem;
+                border-radius: 30px;
                 position: relative;
                 overflow: hidden;
-                margin: 3rem 0;
+                margin: 4rem 0;
             }
 
             .animated-section::before {
+                content: "";
+                position: absolute;
+                top: -150%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: linear-gradient(45deg, 
+                    transparent 25%, 
+                    #f56a6a 50%, 
+                    transparent 75%);
+                animation: gradientFlow 4s infinite linear;
+                opacity: 0.4;
+            }
+
+            .animated-section::after {
+                content: "";
+                position: absolute;
+                top: -150%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: linear-gradient(45deg, 
+                    transparent 35%, 
+                    #f56a6a 60%, 
+                    transparent 85%);
+                animation: gradientFlow 6s infinite linear;
+                opacity: 0.3;
+            }
+
+            @keyframes gradientFlow {
+                0% { transform: translateX(-100%) rotate(45deg); }
+                100% { transform: translateX(100%) rotate(45deg); }
+            }
+
+            .detail-card {
+                background: rgba(255,255,255,0.97);
+                padding: 3rem;
+                border-radius: 30px;
+                margin: 3rem 0;
+                box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+                border: 3px solid rgba(245,106,106,0.2);
+                position: relative;
+                overflow: hidden;
+            }
+
+            .detail-card::before {
                 content: "";
                 position: absolute;
                 top: -50%;
@@ -63,33 +121,43 @@
                 height: 200%;
                 background: linear-gradient(45deg, 
                     transparent 20%, 
-                    #f56a6a 50%, 
+                    rgba(245,106,106,0.05) 50%, 
                     transparent 80%);
-                animation: gradientFlow 5s infinite linear;
-                opacity: 0.4;
+                animation: gradientFlow 8s infinite linear;
+                z-index: 0;
             }
 
-            .animated-section::after {
-                content: "";
-                position: absolute;
-                top: -50%;
-                left: -50%;
-                width: 200%;
-                height: 200%;
-                background: linear-gradient(45deg, 
-                    transparent 30%, 
-                    #f56a6a 60%, 
-                    transparent 90%);
-                animation: gradientFlow 7s infinite linear;
-                opacity: 0.2;
+            .tech-tag {
+                display: inline-block;
+                background: rgba(245,106,106,0.12);
+                color: var(--accent-color);
+                padding: 0.6rem 1.4rem;
+                border-radius: 25px;
+                margin: 0.5rem 0.3rem;
+                font-weight: 700;
+                font-size: 0.95rem;
+                backdrop-filter: blur(5px);
+                border: 1px solid rgba(245,106,106,0.2);
             }
 
-            @keyframes gradientFlow {
-                0% { transform: translateX(-100%) rotate(45deg); }
-                100% { transform: translateX(100%) rotate(45deg); }
+            .phase-timeline {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 2.5rem;
+                margin: 3rem 0;
             }
 
-            /* Rest of the CSS remains same from previous version */
+            .phase-card {
+                background: var(--light-bg);
+                padding: 2rem;
+                border-radius: 25px;
+                border-left: 5px solid var(--accent-color);
+                transition: transform 0.3s ease;
+            }
+
+            .phase-card:hover {
+                transform: translateY(-5px);
+            }
         </style>
     </head>
     <body class="is-preload">
@@ -101,28 +169,121 @@
                     <!-- Hero Section -->
                     <section class="animated-section">
                         <div style="position: relative; z-index: 1; text-align: center; color: white;">
-                            <h1 style="font-size: 2.8rem; margin-bottom: 1.5rem;">
+                            <h1 style="font-size: 3rem; margin-bottom: 2rem; letter-spacing: 1.5px;">
                                 AI Development Roadmap
-                                <div style="font-size: 1.4rem; color: var(--accent-color); margin-top: 1rem;">
-                                    Towards OpenAI-Level Innovation
+                                <div style="font-size: 1.6rem; color: var(--accent-color); margin-top: 1.5rem;">
+                                    Pioneering Ethical AI Solutions
                                 </div>
                             </h1>
                             <div class="openai-hero">
-                                <img src="images/openai-logo.jpg" alt="OpenAI Inspiration">
+                                <img src="images/openai-logo.jpg" alt="OpenAI Inspired Development">
                             </div>
-                            <p style="font-size: 1.1rem; opacity: 0.9; letter-spacing: 1px;">
-                                Bridging Academic Foundations with Cutting-Edge Research
+                            <p style="font-size: 1.2rem; opacity: 0.9; margin-top: 2rem;">
+                                Bridging Academic Research with Industry Innovation
                             </p>
                         </div>
                     </section>
 
-                    <!-- Rest of the content remains same from previous version -->
-                    
+                    <!-- Technical Expertise -->
+                    <section>
+                        <div class="detail-card">
+                            <h2 style="font-size: 2.2rem; margin-bottom: 2rem;">Core Technical Competencies</h2>
+                            
+                            <div class="project">
+                                <h3 style="font-size: 1.8rem;">Natural Language Processing</h3>
+                                <div style="margin: 1.5rem 0;">
+                                    <span class="tech-tag">Python 3.11</span>
+                                    <span class="tech-tag">TF-IDF</span>
+                                    <span class="tech-tag">NLTK</span>
+                                    <span class="tech-tag">Cosine Similarity</span>
+                                </div>
+                                <ul style="font-size: 1.1rem; line-height: 1.8;">
+                                    <li>▹ Developed text similarity analyzer with 89% accuracy across 1K+ documents</li>
+                                    <li>▹ Optimized preprocessing pipelines reducing latency by 65%</li>
+                                    <li>▹ Implemented custom stop-word filters for domain-specific applications</li>
+                                </ul>
+                            </div>
+
+                            <div class="project" style="margin-top: 3rem;">
+                                <h3 style="font-size: 1.8rem;">Game AI Development</h3>
+                                <div style="margin: 1.5rem 0;">
+                                    <span class="tech-tag">C++20</span>
+                                    <span class="tech-tag">Minimax</span>
+                                    <span class="tech-tag">Alpha-Beta Pruning</span>
+                                </div>
+                                <ul style="font-size: 1.1rem; line-height: 1.8;">
+                                    <li>▹ Engineered unbeatable Tic-Tac-Toe AI with 40% performance optimization</li>
+                                    <li>▹ Implemented multi-threaded decision trees for complex game states</li>
+                                    <li>▹ Developed cross-platform compatibility layer for Windows/Linux</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Career Strategy -->
+                        <div class="detail-card">
+                            <h2 style="font-size: 2.2rem; margin-bottom: 2rem;">Strategic Career Timeline</h2>
+                            <div class="phase-timeline">
+                                <div class="phase-card">
+                                    <h3>Foundation Phase (2023-2024)</h3>
+                                    <ul>
+                                        <li>▹ Core CS/ML University Modules</li>
+                                        <li>▹ Python/C++ Specialization</li>
+                                        <li>▹ Open-Source Contributions</li>
+                                        <li>▹ AWS Cloud Fundamentals</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="phase-card">
+                                    <h3>Applied Research (2024-2025)</h3>
+                                    <ul>
+                                        <li>▹ Public Sector Internships</li>
+                                        <li>▹ ML Research Publications</li>
+                                        <li>▹ Advanced Certifications</li>
+                                        <li>▹ Hackathon Participation</li>
+                                    </ul>
+                                </div>
+
+                                <div class="phase-card">
+                                    <h3>Industry Transition (2025-2026)</h3>
+                                    <ul>
+                                        <li>▹ U.S. Work Authorization</li>
+                                        <li>▹ Full-time AI Roles</li>
+                                        <li>▹ Conference Presentations</li>
+                                        <li>▹ Mentorship Programs</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
 
-            <!-- Sidebar remains same from previous version -->
-            
+            <!-- Sidebar -->
+            <div id="sidebar">
+                <div class="inner">
+                    <nav id="menu">
+                        <header class="major">
+                            <h2>Navigation</h2>
+                        </header>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="1career.html" class="active">Career Vision</a></li>
+                            <li><a href="2skills.html">Technical Skills</a></li>
+                            <li><a href="3development.html">Growth Plan</a></li>
+                            <li><a href="4conduct.html">Professional Ethics</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <footer id="footer">
+                        <p class="copyright" style="text-align: center; line-height: 1.6;">
+                            <strong>Terkaudoon Abbo</strong><br>
+                            BSc Computer Science & AI<br>
+                            Nottingham Trent University<br>
+                            <span style="font-size: 0.9em; opacity: 0.8;">Expected Graduation: 2026</span>
+                        </p>
+                    </footer>
+                </div>
+            </div>
         </div>
 
         <!-- Scripts -->
