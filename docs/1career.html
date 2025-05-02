@@ -1,20 +1,32 @@
 <!DOCTYPE HTML>
 <!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Skills Analysis - Terkaudoon Abbo</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+    <head>
+        <title>Career Aspirations - Terkaudoon Abbo</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
         <style>
             :root {
                 --accent-color: #f56a6a;
                 --text-color: #333;
                 --light-bg: #f8f9fa;
+            }
+            
+            .main-header {
+                text-align: center;
+                margin-bottom: 3rem;
+                padding-bottom: 1.5rem;
+                border-bottom: 3px solid var(--accent-color);
+            }
+            
+            .highlight {
+                color: var(--accent-color);
+                font-weight: 600;
             }
             
             .feature-card {
@@ -23,6 +35,11 @@
                 border-radius: 20px;
                 margin: 2rem 0;
                 box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
+            }
+            
+            .feature-card:hover {
+                transform: translateY(-5px);
             }
             
             .grid-container {
@@ -32,186 +49,210 @@
                 margin: 2rem 0;
             }
             
-            .highlight {
-                color: var(--accent-color);
-                font-weight: 600;
+            .quote-box {
+                border-left: 4px solid var(--accent-color);
+                padding-left: 1.5rem;
+                margin: 2rem 0;
+                font-style: italic;
+                background: var(--light-bg);
+                padding: 1.5rem;
+                border-radius: 0 8px 8px 0;
             }
             
-            .skill-category {
-                border-left: 3px solid var(--accent-color);
-                padding-left: 1rem;
+            .aspiration-box {
+                background: linear-gradient(135deg, #000000 0%, #2d3436 100%);
+                color: white;
+                padding: 2rem;
+                border-radius: 8px;
+                margin: 2rem 0;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .aspiration-box:before {
+                content: "";
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: linear-gradient(45deg, transparent 20%, #f56a6a 50%, transparent 80%);
+                animation: shine 3s infinite;
+            }
+            
+            @keyframes shine {
+                0% { transform: translateX(-100%); }
+                100% { transform: translateX(100%); }
+            }
+            
+            .company-logo {
+                width: 120px;
+                margin: 1rem auto;
+                display: block;
+                filter: grayscale(100%);
+                transition: filter 0.3s ease;
+            }
+            
+            .company-logo:hover {
+                filter: grayscale(0%);
+            }
+            
+            .step-list {
+                counter-reset: step-counter;
+                margin-left: 2rem;
+            }
+            
+            .step-list li {
+                counter-increment: step-counter;
                 margin: 1.5rem 0;
+                padding-left: 2rem;
+                position: relative;
+                font-size: 1.1rem;
+            }
+            
+            .step-list li:before {
+                content: counter(step-counter);
+                position: absolute;
+                left: 0;
+                top: -0.2rem;
+                color: var(--accent-color);
+                font-weight: 700;
+                font-size: 1.5rem;
             }
         </style>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong>Terkaudoon Abbo</strong> - Skills Portfolio</a>
-								</header>
+    </head>
+    <body class="is-preload">
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <!-- Main -->
+            <div id="main">
+                <div class="inner">
+                    <!-- Header -->
+                    <header class="main-header">
+                        <h1>Career Aspirations in <span class="highlight">Machine Learning Engineering</span></h1>
+                        <img src="images/openai-logo.png" alt="OpenAI logo" class="company-logo">
+                    </header>
 
-							<!-- Content -->
-								<section>
-									<header class="main">
-										<h1>Technical Skills & Projects</h1>
-									</header>
+                    <!-- Content -->
+                    <section>
+                        <div class="feature-card">
+                            <h2>Career Vision</h2>
+                            <p class="has-text-centered">As an aspiring machine learning engineer, my primary career goal is to secure a role in a <span class="highlight">U.S.-based company</span>, ideally within the public sector initially, to build foundational experience before transitioning to the private sector.</p>
+                            
+                            <div class="aspiration-box">
+                                <h3>Ultimate Career Goal</h3>
+                                <p>I aspire to contribute to groundbreaking AI research at organizations like <span class="highlight">OpenAI</span>, working on fundamental advances in artificial intelligence that benefit humanity while maintaining rigorous safety standards.</p>
+                            </div>
 
-									<span class="image main"><img src="images/pic11.jpg" alt="AI Project Visualizations" /></span>
+                            <div class="grid-container">
+                                <div>
+                                    <h3 class="highlight">Public Sector Focus</h3>
+                                    <ul>
+                                        <li>Impactful healthcare projects</li>
+                                        <li>Infrastructure optimization</li>
+                                        <li>Mission-driven environment</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="highlight">Private Sector Goals</h3>
+                                    <ul>
+                                        <li>AI innovation leadership</li>
+                                        <li>Cutting-edge research</li>
+                                        <li>Industry-specific solutions</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-									<div class="feature-card">
-										<h2>Practical Projects</h2>
-										<div class="grid-container">
-											<!-- Project 1 -->
-											<div class="skill-category">
-												<h3 class="highlight">1. Text Similarity Checker</h3>
-												<p>Python script using TF-IDF embeddings and cosine similarity</p>
-												<ul>
-													<li><span class="highlight">Technical:</span> scikit-learn, pandas</li>
-													<li><span class="highlight">Professional:</span> Debugged edge cases</li>
-													<li><span class="highlight">Extracurricular:</span> Tested with classmates</li>
-												</ul>
-											</div>
-											
-											<!-- Project 2 -->
-											<div class="skill-category">
-												<h3 class="highlight">2. Pizza Order Chatbot</h3>
-												<p>Rule-based Python chatbot with regex validation</p>
-												<ul>
-													<li><span class="highlight">Technical:</span> Conditional logic</li>
-													<li><span class="highlight">Professional:</span> User feedback iteration</li>
-													<li>Integrated with simple UI</li>
-												</ul>
-											</div>
+                        <div class="feature-card">
+                            <h2>Technical Roadmap</h2>
+                            <div class="grid-container">
+                                <div>
+                                    <h3 class="highlight">Core Skills</h3>
+                                    <ul>
+                                        <li>Python/R Programming</li>
+                                        <li>TensorFlow/PyTorch</li>
+                                        <li>Data Preprocessing</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="highlight">Advanced Tools</h3>
+                                    <ul>
+                                        <li>AWS/Azure Cloud</li>
+                                        <li>Spark/Hadoop</li>
+                                        <li>Healthcare Analytics</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="quote-box">
+                                <p>"Currently developing a predictive model for public transport efficiency to demonstrate practical ML applications."</p>
+                            </div>
+                        </div>
 
-											<!-- Project 3 -->
-											<div class="skill-category">
-												<h3 class="highlight">3. Tic-Tac-Toe AI</h3>
-												<p>C++ A algorithm implementation</p>
-												<ul>
-													<li><span class="highlight">Technical:</span> Recursion, game theory</li>
-													<li><span class="highlight">Career Link:</span> Algorithmic thinking</li>
-													<li>Terminal-based UI</li>
-												</ul>
-											</div>
+                        <div class="feature-card">
+                            <h2>Strategic Plan</h2>
+                            <ol class="step-list">
+                                <li>AWS Machine Learning Certification</li>
+                                <li>Network with U.S. professionals via LinkedIn</li>
+                                <li>Develop 3-5 public-sector relevant projects</li>
+                                <li>Master Agile methodologies</li>
+                                <li>Apply to U.S. public sector ML roles</li>
+                            </ol>
+                            
+                            <div class="grid-container" style="margin-top: 2rem;">
+                                <div>
+                                    <h3 class="highlight">Strengths</h3>
+                                    <ul>
+                                        <li>Python/C++ Fundamentals</li>
+                                        <li>Algorithm Implementation</li>
+                                        <li>Time Management</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="highlight">Growth Areas</h3>
+                                    <ul>
+                                        <li>Advanced C++ Concepts</li>
+                                        <li>Python ML Libraries</li>
+                                        <li>Technical Documentation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
 
-											<!-- Project 4 -->
-											<div class="skill-category">
-												<h3 class="highlight">4. Pathfinding Visualizer</h3>
-												<p>C++ A algorithm with ASCII visualization</p>
-												<ul>
-													<li><span class="highlight">Technical:</span> OOP, memory management</li>
-													<li><span class="highlight">Professional:</span> Code restructuring</li>
-													<li>3 code iterations</li>
-												</ul>
-											</div>
+            <!-- Sidebar -->
+            <div id="sidebar">
+                <div class="inner">
+                    <!-- Menu -->
+                    <nav id="menu">
+                        <header class="major">
+                            <h2>Menu</h2>
+                        </header>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="1career.html">Career Aspirations</a></li>
+                            <li><a href="2skills.html">Skills Analysis</a></li>
+                            <li><a href="3development.html">Development Plan</a></li>
+                            <li><a href="4conduct.html">Professional Conduct</a></li>
+                        </ul>
+                    </nav>
+                    <!-- Footer -->
+                    <footer id="footer">
+                        <p class="copyright">&copy; Terkaudoon Abbo. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
 
-											<!-- New Project 5 -->
-											<div class="skill-category">
-												<h3 class="highlight">5. Compact Gaming PC Build</h3>
-												<p>Custom small-form-factor computer assembly</p>
-												<ul>
-													<li><span class="highlight">Technical:</span> Hardware compatibility analysis</li>
-													<li><span class="highlight">Professional:</span> Budget management (£800 build)</li>
-													<li><span class="highlight">Extracurricular:</span> Thermal optimization testing</li>
-													<li>Components: Ryzen 5 5600, RTX 3060 Mini</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-
-									<div class="feature-card">
-										<h2>Professional Skills Development</h2>
-										<div class="grid-container">
-											<div>
-												<h3 class="highlight">Discipline & Consistency</h3>
-												<p>4x/week gym routine maintained alongside studies</p>
-												<ul>
-													<li>Balanced fitness & coding</li>
-													<li>No skipped days in 6 months</li>
-												</ul>
-											</div>
-											
-											<div>
-												<h3 class="highlight">Teamwork in Fast-Paced Environments</h3>
-												<p>Nottingham Forest Football Ground matchday coordination</p>
-												<ul>
-													<li>Collaborated under pressure</li>
-													<li>Peak crowd management</li>
-												</ul>
-											</div>
-
-											<div>
-												<h3 class="highlight">Adaptability</h3>
-												<p>Adjusted routines for exam deadlines</p>
-												<ul>
-													<li>Morning gym during exams</li>
-													<li>Debugging persistence</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-
-									<div class="feature-card">
-										<h2>Career Roadmap</h2>
-										<div class="grid-container">
-											<div>
-												<h3 class="highlight">Current Strengths</h3>
-												<ul>
-													<li>Python/C++ fundamentals</li>
-													<li>Algorithm implementation</li>
-													<li>Time management</li>
-												</ul>
-											</div>
-											
-											<div>
-												<h3 class="highlight">Growth Areas</h3>
-												<ul>
-													<li>Advanced C++ concepts</li>
-													<li>Python ML libraries</li>
-													<li>Technical documentation</li>
-												</ul>
-											</div>
-										</div>
-										<p class="highlight" style="margin-top:1rem;">Goal: Entry-level AI Developer</p>
-									</div>
-								</section>
-						</div>
-					</div>
-
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										<li><a href="1career.html">Career Aspirations</a></li>
-										<li><a href="2skills.html">Skills Analysis</a></li>
-										<li><a href="3development.html">Development Plan</a></li>
-										<li><a href="4conduct.html">Professional Conduct</a></li>
-									</ul>
-								</nav>
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Terkaudoon Abbo. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
-						</div>
-					</div>
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-	</body>
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
