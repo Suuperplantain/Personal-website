@@ -6,61 +6,186 @@
 -->
 <html>
 	<head>
-		<title>Career aspirations</title>
+		<title>Skills Analysis - Terkaudoon Abbo</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            :root {
+                --accent-color: #f56a6a;
+                --text-color: #333;
+                --light-bg: #f8f9fa;
+            }
+            
+            .feature-card {
+                background: var(--light-bg);
+                padding: 2rem;
+                border-radius: 20px;
+                margin: 2rem 0;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+                margin: 2rem 0;
+            }
+            
+            .highlight {
+                color: var(--accent-color);
+                font-weight: 600;
+            }
+            
+            .skill-category {
+                border-left: 3px solid var(--accent-color);
+                padding-left: 1rem;
+                margin: 1.5rem 0;
+            }
+        </style>
 	</head>
 	<body class="is-preload">
-
 		<!-- Wrapper -->
 			<div id="wrapper">
-
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo"><strong>ISYS10401 Example portfolio</a>
-									
+									<a href="index.html" class="logo"><strong>Terkaudoon Abbo</strong> - Skills Portfolio</a>
 								</header>
 
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Analysis and Evidence of Own Skills&nbsp;</h1>
+										<h1>Technical Skills & Projects</h1>
 									</header>
 
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+									<span class="image main"><img src="images/pic11.jpg" alt="AI Project Visualizations" /></span>
 
-									<p>This page should focus on analysis of own skills in relation to those required&nbsp;</p>
-									<p>It should also provide evidence of current skill level (taken from this module or other modules)</p>
-									<p>&nbsp;</p>
+									<div class="feature-card">
+										<h2>Practical Projects</h2>
+										<div class="grid-container">
+											<!-- Project 1 -->
+											<div class="skill-category">
+												<h3 class="highlight">1. Text Similarity Checker</h3>
+												<p>Python script using TF-IDF embeddings and cosine similarity</p>
+												<ul>
+													<li><span class="highlight">Technical:</span> scikit-learn, pandas</li>
+													<li><span class="highlight">Professional:</span> Debugged edge cases</li>
+													<li><span class="highlight">Extracurricular:</span> Tested with classmates</li>
+												</ul>
+											</div>
+											
+											<!-- Project 2 -->
+											<div class="skill-category">
+												<h3 class="highlight">2. Pizza Order Chatbot</h3>
+												<p>Rule-based Python chatbot with regex validation</p>
+												<ul>
+													<li><span class="highlight">Technical:</span> Conditional logic</li>
+													<li><span class="highlight">Professional:</span> User feedback iteration</li>
+													<li>Integrated with simple UI</li>
+												</ul>
+											</div>
 
-									<hr class="major" />
+											<!-- Project 3 -->
+											<div class="skill-category">
+												<h3 class="highlight">3. Tic-Tac-Toe AI</h3>
+												<p>C++ A algorithm implementation</p>
+												<ul>
+													<li><span class="highlight">Technical:</span> Recursion, game theory</li>
+													<li><span class="highlight">Career Link:</span> Algorithmic thinking</li>
+													<li>Terminal-based UI</li>
+												</ul>
+											</div>
 
-									<h2>Add a header</h2>
-									<p>Add paragraph text</p>
-									<p>Add a futher paragraph if needed</p>
+											<!-- Project 4 -->
+											<div class="skill-category">
+												<h3 class="highlight">4. Pathfinding Visualizer</h3>
+												<p>C++ A algorithm with ASCII visualization</p>
+												<ul>
+													<li><span class="highlight">Technical:</span> OOP, memory management</li>
+													<li><span class="highlight">Professional:</span> Code restructuring</li>
+													<li>3 code iterations</li>
+												</ul>
+											</div>
 
-									<!-- repeat the above block of code to add another section with header.-->
+											<!-- New Project 5 -->
+											<div class="skill-category">
+												<h3 class="highlight">5. Compact Gaming PC Build</h3>
+												<p>Custom small-form-factor computer assembly</p>
+												<ul>
+													<li><span class="highlight">Technical:</span> Hardware compatibility analysis</li>
+													<li><span class="highlight">Professional:</span> Budget management (£800 build)</li>
+													<li><span class="highlight">Extracurricular:</span> Thermal optimization testing</li>
+													<li>Components: Ryzen 5 5600, RTX 3060 Mini</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+									<div class="feature-card">
+										<h2>Professional Skills Development</h2>
+										<div class="grid-container">
+											<div>
+												<h3 class="highlight">Discipline & Consistency</h3>
+												<p>4x/week gym routine maintained alongside studies</p>
+												<ul>
+													<li>Balanced fitness & coding</li>
+													<li>No skipped days in 6 months</li>
+												</ul>
+											</div>
+											
+											<div>
+												<h3 class="highlight">Teamwork in Fast-Paced Environments</h3>
+												<p>Nottingham Forest Football Ground matchday coordination</p>
+												<ul>
+													<li>Collaborated under pressure</li>
+													<li>Peak crowd management</li>
+												</ul>
+											</div>
+
+											<div>
+												<h3 class="highlight">Adaptability</h3>
+												<p>Adjusted routines for exam deadlines</p>
+												<ul>
+													<li>Morning gym during exams</li>
+													<li>Debugging persistence</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+									<div class="feature-card">
+										<h2>Career Roadmap</h2>
+										<div class="grid-container">
+											<div>
+												<h3 class="highlight">Current Strengths</h3>
+												<ul>
+													<li>Python/C++ fundamentals</li>
+													<li>Algorithm implementation</li>
+													<li>Time management</li>
+												</ul>
+											</div>
+											
+											<div>
+												<h3 class="highlight">Growth Areas</h3>
+												<ul>
+													<li>Advanced C++ concepts</li>
+													<li>Python ML libraries</li>
+													<li>Technical documentation</li>
+												</ul>
+											</div>
+										</div>
+										<p class="highlight" style="margin-top:1rem;">Goal: Entry-level AI Developer</p>
+									</div>
 								</section>
-
 						</div>
 					</div>
 
 				<!-- Sidebar -->
 					<div id="sidebar">
 						<div class="inner">
-
-							<!-- Search -->
-								<section id="search" class="alt">
-									<!--<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>-->
-								</section>
-
 							<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
@@ -68,19 +193,18 @@
 									</header>
 									<ul>
 										<li><a href="index.html">Homepage</a></li>
-										<li><a href="1career.html">Reflections on career aspirations</a></li>
-										<li><a href="2skills.html">Analysis and evidence of own skills</a></li>
-										<li><a href="3development.html">Knowledge and skills development</a></li>
-										<li><a href="4conduct.html">Reflection on professional conduct</a></li>
+										<li><a href="1career.html">Career Aspirations</a></li>
+										<li><a href="2skills.html">Skills Analysis</a></li>
+										<li><a href="3development.html">Development Plan</a></li>
+										<li><a href="4conduct.html">Professional Conduct</a></li>
 									</ul>
 								</nav>
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+									<p class="copyright">&copy; Terkaudoon Abbo. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 								</footer>
 						</div>
 					</div>
-
 			</div>
 
 		<!-- Scripts -->
@@ -89,6 +213,5 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
