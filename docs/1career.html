@@ -13,112 +13,44 @@
         <style>
             :root {
                 --accent-color: #f56a6a;
-                --text-color: #333;
+                --text-color: #2e2e2e;
                 --light-bg: #f8f9fa;
             }
-            
-            .main-header {
-                text-align: center;
-                margin-bottom: 3rem;
-                padding-bottom: 1.5rem;
-                border-bottom: 3px solid var(--accent-color);
-            }
-            
-            .highlight {
-                color: var(--accent-color);
-                font-weight: 600;
-            }
-            
-            .feature-card {
-                background: var(--light-bg);
+
+            .project-card {
+                background: white;
                 padding: 2rem;
-                border-radius: 20px;
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
                 margin: 2rem 0;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
                 transition: transform 0.3s ease;
             }
-            
-            .feature-card:hover {
+
+            .project-card:hover {
                 transform: translateY(-5px);
             }
-            
-            .grid-container {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 2rem;
-                margin: 2rem 0;
-            }
-            
-            .quote-box {
-                border-left: 4px solid var(--accent-color);
-                padding-left: 1.5rem;
-                margin: 2rem 0;
-                font-style: italic;
-                background: var(--light-bg);
-                padding: 1.5rem;
-                border-radius: 0 8px 8px 0;
-            }
-            
-            .aspiration-box {
-                background: linear-gradient(135deg, #000000 0%, #2d3436 100%);
-                color: white;
-                padding: 2rem;
-                border-radius: 8px;
-                margin: 2rem 0;
-                text-align: center;
-                position: relative;
-                overflow: hidden;
-            }
-            
-            .aspiration-box:before {
-                content: "";
-                position: absolute;
-                top: -50%;
-                left: -50%;
-                width: 200%;
-                height: 200%;
-                background: linear-gradient(45deg, transparent 20%, #f56a6a 50%, transparent 80%);
-                animation: shine 3s infinite;
-            }
-            
-            @keyframes shine {
-                0% { transform: translateX(-100%); }
-                100% { transform: translateX(100%); }
-            }
-            
-            .company-logo {
-                width: 120px;
-                margin: 1rem auto;
-                display: block;
-                filter: grayscale(100%);
-                transition: filter 0.3s ease;
-            }
-            
-            .company-logo:hover {
-                filter: grayscale(0%);
-            }
-            
-            .step-list {
-                counter-reset: step-counter;
-                margin-left: 2rem;
-            }
-            
-            .step-list li {
-                counter-increment: step-counter;
-                margin: 1.5rem 0;
-                padding-left: 2rem;
-                position: relative;
-                font-size: 1.1rem;
-            }
-            
-            .step-list li:before {
-                content: counter(step-counter);
-                position: absolute;
-                left: 0;
-                top: -0.2rem;
+
+            .skill-pill {
+                display: inline-block;
+                background: rgba(245,106,106,0.1);
                 color: var(--accent-color);
-                font-weight: 700;
-                font-size: 1.5rem;
+                padding: 0.5rem 1rem;
+                border-radius: 20px;
+                margin: 0.3rem;
+                font-size: 0.9rem;
+            }
+
+            .timeline {
+                border-left: 3px solid var(--accent-color);
+                padding: 2rem;
+                margin: 2rem 0;
+            }
+
+            .company-logo {
+                width: 150px;
+                margin: 2rem auto;
+                opacity: 0.9;
+                transition: opacity 0.3s ease;
             }
         </style>
     </head>
@@ -129,93 +61,110 @@
             <div id="main">
                 <div class="inner">
                     <!-- Header -->
-                    <header class="main-header">
-                        <h1>Career Aspirations in <span class="highlight">Machine Learning Engineering</span></h1>
-                        <img src="images/openai-logo.png" alt="OpenAI logo" class="company-logo">
+                    <header class="major" style="text-align: center; margin: 4rem 0;">
+                        <h1 style="font-size: 2.5rem;">AI Development Journey<br><span style="color: var(--accent-color);">Terkaudoon Abbo</span></h1>
+                        <img src="images/openai-logo.jpg" alt="Career Goals" class="company-logo">
                     </header>
 
-                    <!-- Content -->
+                    <!-- Technical Projects -->
                     <section>
-                        <div class="feature-card">
-                            <h2>Career Vision</h2>
-                            <p class="has-text-centered">As an aspiring machine learning engineer, my primary career goal is to secure a role in a <span class="highlight">U.S.-based company</span>, ideally within the public sector initially, to build foundational experience before transitioning to the private sector.</p>
-                            
-                            <div class="aspiration-box">
-                                <h3>Ultimate Career Goal</h3>
-                                <p>I aspire to contribute to groundbreaking AI research at organizations like <span class="highlight">OpenAI</span>, working on fundamental advances in artificial intelligence that benefit humanity while maintaining rigorous safety standards.</p>
-                            </div>
-
-                            <div class="grid-container">
-                                <div>
-                                    <h3 class="highlight">Public Sector Focus</h3>
-                                    <ul>
-                                        <li>Impactful healthcare projects</li>
-                                        <li>Infrastructure optimization</li>
-                                        <li>Mission-driven environment</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h3 class="highlight">Private Sector Goals</h3>
-                                    <ul>
-                                        <li>AI innovation leadership</li>
-                                        <li>Cutting-edge research</li>
-                                        <li>Industry-specific solutions</li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <h2>Technical Projects & Skills</h2>
+                        
+                        <div class="project-card">
+                            <h3>1. Text Similarity Checker</h3>
+                            <p>Python script comparing sentence similarity using TF-IDF embeddings</p>
+                            <div class="skill-pill">scikit-learn</div>
+                            <div class="skill-pill">Pandas</div>
+                            <div class="skill-pill">Cosine Similarity</div>
+                            <ul style="margin-top: 1rem;">
+                                <li>▹ Debugged edge cases (empty inputs)</li>
+                                <li>▹ Tested with 50+ sentence pairs</li>
+                                <li>▹ Achieved 85% accuracy on test data</li>
+                            </ul>
                         </div>
 
-                        <div class="feature-card">
-                            <h2>Technical Roadmap</h2>
-                            <div class="grid-container">
-                                <div>
-                                    <h3 class="highlight">Core Skills</h3>
-                                    <ul>
-                                        <li>Python/R Programming</li>
-                                        <li>TensorFlow/PyTorch</li>
-                                        <li>Data Preprocessing</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h3 class="highlight">Advanced Tools</h3>
-                                    <ul>
-                                        <li>AWS/Azure Cloud</li>
-                                        <li>Spark/Hadoop</li>
-                                        <li>Healthcare Analytics</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="quote-box">
-                                <p>"Currently developing a predictive model for public transport efficiency to demonstrate practical ML applications."</p>
-                            </div>
+                        <div class="project-card">
+                            <h3>2. Pizza Order Chatbot</h3>
+                            <p>Rule-based ordering system with regex validation</p>
+                            <div class="skill-pill">Conditional Logic</div>
+                            <div class="skill-pill">Regex</div>
+                            <div class="skill-pill">User Testing</div>
+                            <ul style="margin-top: 1rem;">
+                                <li>▹ Collected friend feedback (10+ users)</li>
+                                <li>▹ 3 iterative improvements</li>
+                                <li>▹ Handled 15+ topping combinations</li>
+                            </ul>
                         </div>
 
-                        <div class="feature-card">
-                            <h2>Strategic Plan</h2>
-                            <ol class="step-list">
-                                <li>AWS Machine Learning Certification</li>
-                                <li>Network with U.S. professionals via LinkedIn</li>
-                                <li>Develop 3-5 public-sector relevant projects</li>
-                                <li>Master Agile methodologies</li>
-                                <li>Apply to U.S. public sector ML roles</li>
-                            </ol>
-                            
-                            <div class="grid-container" style="margin-top: 2rem;">
+                        <div class="project-card">
+                            <h3>3. Tic-Tac-Toe AI</h3>
+                            <p>C++ Minimax algorithm implementation</p>
+                            <div class="skill-pill">Recursion</div>
+                            <div class="skill-pill">Game Theory</div>
+                            <div class="skill-pill">Terminal UI</div>
+                            <ul style="margin-top: 1rem;">
+                                <li>▹ Unbeatable AI opponent</li>
+                                <li>▹ Optimized decision tree</li>
+                                <li>▹ 100% win rate in 50+ tests</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-card">
+                            <h3>4. Pathfinding Visualizer</h3>
+                            <p>C++ A* algorithm with ASCII visualization</p>
+                            <div class="skill-pill">OOP</div>
+                            <div class="skill-pill">Memory Management</div>
+                            <div class="skill-pill">Grid Systems</div>
+                            <ul style="margin-top: 1rem;">
+                                <li>▹ 3 code restructures</li>
+                                <li>▹ 15+ test mazes</li>
+                                <li>▹ 92% optimal path success</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Professional Development -->
+                    <section class="timeline">
+                        <h2>Professional Skills Timeline</h2>
+                        <div class="project-card">
+                            <h3>Discipline & Consistency</h3>
+                            <div class="skill-pill">Time Management</div>
+                            <div class="skill-pill">Routine Optimization</div>
+                            <ul>
+                                <li>▹ 4x/week gym routine maintained</li>
+                                <li>▹ 0 missed coding sessions in 6 months</li>
+                                <li>▹ Morning routine adaptation during exams</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-card">
+                            <h3>Teamwork in Fast-Paced Environments</h3>
+                            <div class="skill-pill">Collaboration</div>
+                            <div class="skill-pill">Crisis Management</div>
+                            <ul>
+                                <li>▹ Trent Bridge Cricket Ground matchdays</li>
+                                <li>▹ Coordinated 50+ crowd events</li>
+                                <li>▹ Peak-time team communication</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-card">
+                            <h3>Career Development Plan</h3>
+                            <div class="grid-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
                                 <div>
-                                    <h3 class="highlight">Strengths</h3>
+                                    <h4 class="highlight">Strengths</h4>
                                     <ul>
-                                        <li>Python/C++ Fundamentals</li>
-                                        <li>Algorithm Implementation</li>
-                                        <li>Time Management</li>
+                                        <li>▹ Python/C++ Fundamentals</li>
+                                        <li>▹ Algorithm Implementation</li>
+                                        <li>▹ Problem-Solving Mindset</li>
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 class="highlight">Growth Areas</h3>
+                                    <h4 class="highlight">Growth Areas</h4>
                                     <ul>
-                                        <li>Advanced C++ Concepts</li>
-                                        <li>Python ML Libraries</li>
-                                        <li>Technical Documentation</li>
+                                        <li>▹ Advanced Memory Management</li>
+                                        <li>▹ ML Libraries (PyTorch/TF)</li>
+                                        <li>▹ Technical Documentation</li>
                                     </ul>
                                 </div>
                             </div>
@@ -227,22 +176,25 @@
             <!-- Sidebar -->
             <div id="sidebar">
                 <div class="inner">
-                    <!-- Menu -->
                     <nav id="menu">
                         <header class="major">
-                            <h2>Menu</h2>
+                            <h2>Navigation</h2>
                         </header>
                         <ul>
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="1career.html">Career Aspirations</a></li>
-                            <li><a href="2skills.html">Skills Analysis</a></li>
-                            <li><a href="3development.html">Development Plan</a></li>
+                            <li><a href="1career.html" class="active">Career Plan</a></li>
+                            <li><a href="2skills.html">Skill Analysis</a></li>
+                            <li><a href="3development.html">Development Map</a></li>
                             <li><a href="4conduct.html">Professional Conduct</a></li>
                         </ul>
                     </nav>
-                    <!-- Footer -->
+                    
                     <footer id="footer">
-                        <p class="copyright">&copy; Terkaudoon Abbo. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                        <p class="copyright" style="text-align: center;">
+                            &copy; Terkaudoon Abbo<br>
+                            BSc Computer Science & AI<br>
+                            Nottingham Trent University
+                        </p>
                     </footer>
                 </div>
             </div>
